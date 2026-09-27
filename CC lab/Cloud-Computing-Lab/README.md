@@ -108,6 +108,23 @@ For a useful comparison, record each VM's assigned CPU and memory, guest OS, Sys
 See [LAB_REPORT.md](LAB_REPORT.md) for the detailed procedure, architecture notes, observations, and limitations.
 
 --
+
+### Before you start (prerequisites) :
+-Proxmox VE server address, port 8006, and login details.
+
+-VMware Workstation installed on your computer.
+
+-An Ubuntu ISO file.
+
+-At least 20 GB free disk space.
+
+-At least 4 GB free RAM.
+
+-Git installed on your computer.
+
+-A GitHub account.
+
+
 ### Steps we followed:
 
 1.Logged in to Proxmox VE.
