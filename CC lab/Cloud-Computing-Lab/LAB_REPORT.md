@@ -24,7 +24,6 @@ A Type-1 hypervisor runs on the physical machine as the virtualization platform.
 | Virtual disk | 20 GB | 20 GB |
 | Network | VirtIO bridge (`vmbr0`) shown | Not established from supplied images |
 
-The supplied screenshots are the source for these configuration details. Any settings not visible in the screenshots are left unspecified.
 
 ## 4. Procedure
 
@@ -74,15 +73,13 @@ Using the displayed throughput values, the difference between these runs is appr
 (1749.16 - 975.67) / 975.67 × 100 ≈ 79.3%
 ```
 
-This calculation describes the measured runs only. The VMware summary screenshot does not show a 95th percentile value, so none is inferred.
-
 ## 6. Discussion
 
 The Proxmox run recorded higher throughput and a lower average and maximum latency than the VMware run. The minimum latency was slightly lower in the VMware run. Individual benchmark outcomes can be affected by host CPU model, background processes, guest configuration, number of benchmark threads, power settings, and measurement variation. The screenshots document VM allocations, but they do not establish that every condition was identical during both runs. Therefore the observed gap should not be attributed solely to hypervisor type.
 
 ## 7. Conclusion
 
-The lab demonstrates VM creation and guest verification on Proxmox VE and VMware Workstation, along with a Sysbench CPU benchmark on both. In the submitted measurements, Proxmox recorded 1,749.16 events/sec and VMware Workstation recorded 975.67 events/sec. Repeated runs under controlled host conditions would be needed to make a stronger performance comparison.
+The experiment demonstrates VM creation and CPU benchmarking using Proxmox VE and VMware Workstation. In the measured runs, Proxmox VE achieved 1,749.16 events/sec, while VMware Workstation achieved 975.67 events/sec, indicating higher measured throughput for the Proxmox configuration. However, this result alone does not prove that Type-1 hypervisors are always faster than Type-2 hypervisors, because VM configuration and host-system conditions can also affect benchmark performance.
 
 ## 8. Screenshot index
 
