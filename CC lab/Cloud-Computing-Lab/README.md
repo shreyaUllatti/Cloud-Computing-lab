@@ -111,12 +111,21 @@ See [LAB_REPORT.md](LAB_REPORT.md) for the detailed procedure, architecture note
 ### Steps we followed:
 
 1.Logged in to Proxmox VE.
+
 2.Created an Ubuntu VM (2 vCPU, 2 GB RAM, 20 GB disk).
+
 3.Started the VM and installed Ubuntu.
+
 4.Checked CPU and memory using lscpu and free -h.
+
 5.Installed Sysbench.
+
 6.Ran the CPU benchmark on Proxmox VM.
+
 7.Repeated the same steps in VMware Workstation.
+
 8.Ran the CPU benchmark on VMware VM.
+
 9.Compared both results.
+
 10.Saved screenshots as proof.
