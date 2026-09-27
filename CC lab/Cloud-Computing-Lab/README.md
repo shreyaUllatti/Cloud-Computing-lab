@@ -1,18 +1,4 @@
-<div align="center">
 
-# ☁️ Cloud Computing Lab
-### Hypervisor Setup & CPU Benchmark Study
-
-**A hands-on comparison of Type-1 and Type-2 virtualization**  
-Proxmox VE (KVM) · VMware Workstation · Ubuntu · Sysbench
-
-![Proxmox VE](https://img.shields.io/badge/Type--1-Proxmox%20VE-e57000?style=for-the-badge)
-![VMware](https://img.shields.io/badge/Type--2-VMware%20Workstation-607078?style=for-the-badge)
-![Ubuntu](https://img.shields.io/badge/Guest-Ubuntu%2024.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-
-</div>
-
----
 
 ## ✨ Project overview
 
@@ -22,6 +8,27 @@ This repository documents a cloud computing lab in which an Ubuntu virtual machi
 |---|---|---|
 | **Part A · Type-1** | Proxmox VE / KVM | VM setup, running guest, Ubuntu checks, resource monitoring, Sysbench output |
 | **Part B · Type-2** | VMware Workstation | VM wizard and hardware settings, Ubuntu checks, Sysbench installation and output |
+
+### Hypervisor Performance Analysis
+Type-1 vs Type-2 Hypervisor Comparison Proxmox VE (Type-1) vs VMware Workstation (Type-2)
+
+What is this experiment?
+We test two types of hypervisors.
+
+A hypervisor is software that runs virtual machines (VMs).
+
+Type-1 hypervisor — installs directly on a server. No host OS. Example: Proxmox VE.
+
+Type-2 hypervisor — installs on top of a normal OS, like an app. Example: VMware Workstation.
+
+We create the same Ubuntu VM on both.
+
+We run a CPU test called Sysbench on both.
+
+We compare the results.
+
+We check which hypervisor is faster.
+
 
 ## 📊 Recorded benchmark results
 
@@ -100,8 +107,16 @@ For a useful comparison, record each VM's assigned CPU and memory, guest OS, Sys
 
 See [LAB_REPORT.md](LAB_REPORT.md) for the detailed procedure, architecture notes, observations, and limitations.
 
----
+--
+### Steps we followed:
 
-<div align="center">
-Made for a Cloud Computing laboratory · Screenshots and measurements from the submitted lab materials
-</div>
+1.Logged in to Proxmox VE.
+2.Created an Ubuntu VM (2 vCPU, 2 GB RAM, 20 GB disk).
+3.Started the VM and installed Ubuntu.
+4.Checked CPU and memory using lscpu and free -h.
+5.Installed Sysbench.
+6.Ran the CPU benchmark on Proxmox VM.
+7.Repeated the same steps in VMware Workstation.
+8.Ran the CPU benchmark on VMware VM.
+9.Compared both results.
+10.Saved screenshots as proof.
