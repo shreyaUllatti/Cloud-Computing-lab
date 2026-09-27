@@ -83,6 +83,15 @@ A Type-1 hypervisor runs on the physical machine as the virtualization platform.
 
 <img width="2085" height="1497" alt="image" src="https://github.com/user-attachments/assets/204e920e-389b-4e3b-955b-f7132ba572cf" />
 
+## What each term means?
+
+Total execution time — how long the test ran. Lower is better.
+
+Total Events — how many calculations were done. Higher is better.
+
+Events per Second — main speed number. Higher = faster.
+
+Average Latency — average time for one calculation. Lower is better.
 
 Commands used in the Ubuntu guest:
 
