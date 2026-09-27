@@ -179,3 +179,22 @@ See [LAB_REPORT.md](LAB_REPORT.md) for the detailed procedure, architecture note
 Comparison (screenshots/comparison/)
 
 01-hypervisor-performance-comparison.jpeg
+
+## How to upload to GitHub
+1.Go to your GitHub repository.
+
+2.Click Add file → Upload files.
+
+3.Drag in the folders and files.
+
+4.Click Commit changes.
+
+# Or using Git commands:
+
+cd CC-Experiment-01-Hypervisor-Analysis
+git init
+git add .
+git commit -m "Add hypervisor performance analysis experiment"
+git branch -M main
+git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+git push -u origin main
