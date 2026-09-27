@@ -22,8 +22,6 @@ A Type-1 hypervisor runs on the physical machine as the virtualization platform.
 | Virtual CPUs | 2 cores | 2 vCPU |
 | Memory | 2,048 MB | 2 GB |
 | Virtual disk | 20 GB | 20 GB |
-| Network | VirtIO bridge (`vmbr0`) shown | Not established from supplied images |
-
 
 ## 4. Procedure
 
@@ -100,7 +98,7 @@ sysbench --version
 sysbench cpu --cpu-max-prime=20000 run
 ```
 
-## 5. Results transcribed from the supplied screenshots
+## 5. Results:
 
 | Metric | Proxmox VE | VMware Workstation |
 |---|---:|---:|
