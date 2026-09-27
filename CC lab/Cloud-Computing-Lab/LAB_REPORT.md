@@ -14,7 +14,7 @@ To configure an Ubuntu virtual machine on a Type-1 hypervisor and a Type-2 hyper
 
 A Type-1 hypervisor runs on the physical machine as the virtualization platform. Proxmox VE uses KVM with the Linux kernel to host virtual machines. A Type-2 hypervisor, such as VMware Workstation, runs as software on a host operating system. Both approaches can run guest operating systems; their management model, host environment, and resource scheduling differ.
 
-## 3. Configuration documented in the screenshots
+## 3. Configuration 
 
 | Setting | Proxmox VE | VMware Workstation |
 |---|---|---|
@@ -105,12 +105,12 @@ sysbench cpu --cpu-max-prime=20000 run
 | Metric | Proxmox VE | VMware Workstation |
 |---|---:|---:|
 | Sysbench CPU speed | 1,749.16 events/sec | 975.67 events/sec |
-| Total time | 10.005 s | 10.0003 s |
-| Total events | 17,494 | 9,760 |
+| Total time | 10.005 s | 10.0006 s |
+| Total events | 17,494 | 7,077 |
 | Minimum latency | 0.57 ms | 0.53 ms |
-| Average latency | 0.57 ms | 1.02 ms |
+| Average latency | 0.57 ms | 1.41 ms |
 | Maximum latency | 2.43 ms | 3.66 ms |
-| 95th percentile latency | 0.58 ms | Not visible in supplied VMware summary |
+ 
 
 Using the displayed throughput values, the difference between these runs is approximately:
 
