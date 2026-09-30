@@ -90,9 +90,12 @@ The VMware screenshots document VM creation and the CPU, memory, and disk config
 Cloud-Computing-Lab/
 ├── README.md
 ├── LAB_REPORT.md
-└── images/
-    ├── type1-proxmox/   # Proxmox setup, guest checks, monitoring, benchmark
-    └── type2-vmware/    # VMware setup, guest checks, benchmark
+├── .gitignore
+├── images/
+│   ├── type1-proxmox/      # Proxmox setup, guest checks, monitoring, benchmark
+│   └── type2-vmware/       # VMware setup, guest checks, benchmark
+└── results/
+    └── performance-analysis.md   # Performance results, comparison, graphs, conclusion
 ```
 
 Browse the full screenshot galleries: [Type-1 · Proxmox](images/type1-proxmox/) · [Type-2 · VMware](images/type2-vmware/)
