@@ -9,6 +9,17 @@ This repository documents a cloud computing lab in which an Ubuntu virtual machi
 | **Part A · Type-1** | Proxmox VE / KVM | VM setup, running guest, Ubuntu checks, resource monitoring, Sysbench output |
 | **Part B · Type-2** | VMware Workstation | VM wizard and hardware settings, Ubuntu checks, Sysbench installation and output |
 
+###  Aim
+To compare the CPU performance of a Type-1 hypervisor (Proxmox VE) and a Type-2 hypervisor (VMware Workstation) by running an identically configured Ubuntu virtual machine and the same Sysbench CPU benchmark on both.
+
+### Objectives
+Create an Ubuntu VM on Proxmox VE (Type-1).
+Create an Ubuntu VM with the same settings on VMware Workstation (Type-2).
+Run the Sysbench CPU benchmark on both VMs.
+Record and compare total time, total events, events per second, and latency.
+Find out which hypervisor type performs better and explain why.
+Store all proof (screenshots, graphs, results) in a GitHub repository.
+
 ### Hypervisor Performance Analysis
 Type-1 vs Type-2 Hypervisor Comparison Proxmox VE (Type-1) vs VMware Workstation (Type-2)
 
