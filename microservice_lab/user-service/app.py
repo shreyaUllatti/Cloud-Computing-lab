@@ -1,0 +1,20 @@
+from fastapi import FastAPI
+
+app = FastAPI(title="User Service")
+
+
+@app.get("/")
+def home():
+    return {
+        "service": "User Service",
+        "status": "running"
+    }
+
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    return {
+        "id": user_id,
+        "name": "Shreya",
+        "location": "Hubballi"
+    }
