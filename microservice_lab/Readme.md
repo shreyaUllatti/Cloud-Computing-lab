@@ -381,6 +381,20 @@ To stop all services:
 ```
 docker compose down
 ```
+## Performance Graphs
+
+### Response Time vs Concurrent Requests
+
+The graph below shows how the average response time changes as the number of concurrent requests increases.
+
+![Response Time vs Concurrent Requests](screenshots/response_time_vs_concurrency.png)
+
+### Throughput vs Concurrent Requests
+
+The graph below shows the throughput achieved at different concurrency levels.
+
+![Throughput vs Concurrent Requests](screenshots/throughput_vs_concurrency.png)
+
 ## 14. Final Deliverables Checklist
 
 - [x] Source code of the three microservices
