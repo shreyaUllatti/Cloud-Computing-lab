@@ -257,7 +257,7 @@ docker stats --no-stream
 | user-service | Approximately 0.24% - 0.31% |
 | restaurant-service | Approximately 0.21% - 0.28% |
 
-> **Note:** These are observed Docker statistics snapshots and are not assigned to individual W1-W5 workloads.
+
 
 ---
 
@@ -281,43 +281,44 @@ docker stats --no-stream
 | W4 | 8 | 0.0605 | 117.94 | 0 |
 | W5 | 16 | 0.0717 | 153.54 | 0 |
 
----
+### 11.5 Workload Summary
 
-### 11.5 Concurrent Requests vs Response Time
+| Workload | Concurrency | Response Time | Throughput | Failed Requests | Success Rate |
+|---|---:|---:|---:|---:|---:|
+| W1 | 1 | 0.0212 s | 46.71 req/s | 0 | 100% |
+| W2 | 2 | 0.0269 s | 72.48 req/s | 0 | 100% |
+| W3 | 4 | 0.0328 s | 112.19 req/s | 0 | 100% |
+| W4 | 8 | 0.0605 s | 117.94 req/s | 0 | 100% |
+| W5 | 16 | 0.0717 s | 153.54 req/s | 0 | 100% |
 
-| **Concurrent Requests** | **Average Response Time (s)** |
-|--------------------------|--------------------------------|
+
+### 11.6 Concurrent Requests vs Average Response Time
+
+| Concurrent Requests | Average Response Time (s) |
+|---:|---:|
 | 1 | 0.0212 |
 | 2 | 0.0269 |
 | 4 | 0.0328 |
 | 8 | 0.0605 |
 | 16 | 0.0717 |
 
----
+### 11.7 Concurrent Requests vs Throughput
 
-### 11.6 Concurrent Requests vs Throughput
-
-| **Concurrent Requests** | **Throughput (req/s)** |
-|--------------------------|------------------------|
+| Concurrent Requests | Throughput (req/s) |
+|---:|---:|
 | 1 | 46.71 |
 | 2 | 72.48 |
 | 4 | 112.19 |
 | 8 | 117.94 |
 | 16 | 153.54 |
 
----
+### 11.8 Docker Resource Snapshot
 
-### 11.7 CPU Observation Table
-
-| **Workload** | **Concurrency** | **order-service CPU** | **user-service CPU** | **restaurant-service CPU** |
-|--------------|-----------------|------------------------|----------------------|----------------------------|
-| W1 | 1 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W2 | 2 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W3 | 4 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W4 | 8 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W5 | 16 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-
----
+| Service | CPU Snapshot | Memory Snapshot |
+|---|---:|---:|
+| order-service | 0.18% - 0.20% | 42.6 - 42.8 MiB |
+| user-service | 0.24% - 0.31% | 36.7 - 36.8 MiB |
+| restaurant-service | 0.21% - 0.28% | 35.2 - 35.7 MiB |
 
 ### 11.8 Memory Observation Table
 
@@ -329,17 +330,21 @@ docker stats --no-stream
 | W4 | 8 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
 | W5 | 16 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
 
----
+### 11.9 Final Performance Summary
 
-### 11.9 Docker Resource Snapshot
-
-| **Service** | **CPU Snapshot** | **Memory Snapshot** |
-|-------------|------------------|---------------------|
-| order-service | 0.18% - 0.20% | 42.6 - 42.8 MiB |
-| user-service | 0.24% - 0.31% | 36.7 - 36.8 MiB |
-| restaurant-service | 0.21% - 0.28% | 35.2 - 35.7 MiB |
-
----
+| Metric | Result |
+|---|---:|
+| Total Requests Tested | 100 |
+| Successful Requests | 100 |
+| Failed Requests | 0 |
+| Success Rate | 100% |
+| Maximum Throughput | 153.54 req/s |
+| Maximum Tested Concurrency | 16 |
+| Minimum Response Time | 0.0212 s |
+| Maximum Response Time | 0.0717 s |
+| Highest Observed CPU | 0.31% |
+| Highest Observed Memory | 42.8 MiB |
+| Service With Highest Observed Memory | order-service ||
 
 ### 11.10 Overall Test Summary
 
