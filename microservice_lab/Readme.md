@@ -320,16 +320,6 @@ docker stats --no-stream
 | user-service | 0.24% - 0.31% | 36.7 - 36.8 MiB |
 | restaurant-service | 0.21% - 0.28% | 35.2 - 35.7 MiB |
 
-### 11.8 Memory Observation Table
-
-| **Workload** | **Concurrency** | **order-service Memory** | **user-service Memory** | **restaurant-service Memory** |
-|--------------|-----------------|--------------------------|-------------------------|------------------------------|
-| W1 | 1 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W2 | 2 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W3 | 4 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W4 | 8 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-| W5 | 16 | Not recorded per workload | Not recorded per workload | Not recorded per workload |
-
 ### 11.9 Final Performance Summary
 
 | Metric | Result |
